@@ -1,0 +1,37 @@
+package Wallet_api.service;
+
+import Wallet_api.dto.AccountResponse;
+import Wallet_api.entity.Account;
+import Wallet_api.repository.AccountRepository;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
+
+@Service
+public class AccountService {
+
+    private final AccountRepository accountRepository;
+
+    public AccountService(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
+    }
+
+    @Transactional(readOnly = true)
+    public AccountResponse getAccountByEmail(String email) {
+        Account account = accountRepository.findByUser_Email(email)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Wallet account not found"
+                ));
+
+        return new AccountResponse(
+                account.getId(),
+                account.getUser().getEmail(),
+                account.getBalance(),
+                account.getStatus(),
+                account.getVersion()
+        );
+    }
+}
