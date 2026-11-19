@@ -139,3 +139,6 @@ Make one successful transfer in the frontend, then select **Replay same transfer
 ## Security note
 
 This project is for local learning and demonstration only. Deposits create simulated funds. Do not use real banking credentials, real payment data, or demo configuration values in a production environment.
+
+<img width="1186" height="1004" alt="recipient_number_blurred_id_preserved" src="https://github.com/user-attachments/assets/617121f7-c610-4d35-9230-905b414f8de2" />
+
