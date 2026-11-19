@@ -1,6 +1,6 @@
 # UPI-Simulation
 
-A full-stack digital wallet demo built with React, Spring Boot, and MySQL. It simulates wallet balances and transfers for learning and project demonstrations; it does **not** connect to UPI, banks, or real money.
+A full-stack digital wallet demo built with React, Spring Boot, and MySQL. It simulates wallet balances and transfers for learning and project demonstrations.
 
 ## Features
 
