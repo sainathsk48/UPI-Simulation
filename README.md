@@ -136,9 +136,6 @@ Swagger UI is available at `http://localhost:8081/swagger-ui/index.html` while t
 
 Make one successful transfer in the frontend, then select **Replay same transfer**. The replay sends the same request with the original idempotency key. It should return the same transaction ID, and the wallet balance should only change once. This demonstrates backend duplicate-request handling; it is not a connection to UPI's payment network or bank reconciliation systems.
 
-## Security note
-
-This project is for local learning and demonstration only. Deposits create simulated funds. Do not use real banking credentials, real payment data, or demo configuration values in a production environment.
-
+#Executed Idempotency Example
 <img width="1186" height="1004" alt="recipient_number_blurred_id_preserved" src="https://github.com/user-attachments/assets/617121f7-c610-4d35-9230-905b414f8de2" />
 
